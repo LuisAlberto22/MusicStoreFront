@@ -1,0 +1,9 @@
+footer {
+    display: flex;
+    background-color: var(--secondary-color);
+    justify-content: center;
+    gap: 10px;
+    & span{
+        color: white;
+    }
+}
