@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy" : "ng deploy --repo https://github.com/LuisAlberto22/MusicStoreFront"
+    "deploy" : "ng deploy --repo https://github.com/LuisAlberto22/MusicStoreFront --base-href https://luisalberto22.github.io/MusicStoreFront/"
   },
   "private": true,
   "dependencies": {

@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  selector: 'app-root', //Esto nos indica como va a ser llamado
+  standalone: true, //No se nesecitan los modulos antiguos de angular
+  imports: [RouterOutlet], //Es obligatorio cuando es standalone
+  //template: '<h1>Hola</h1>', 
+  templateUrl: './app.component.html', // este es la ruta del html
+  styleUrl: './app.component.css' // ruta de los estilos del html
 })
 export class AppComponent {
   title = 'musical-events';
