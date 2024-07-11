@@ -3,7 +3,7 @@ header {
     display: flex;
     justify-content: center;
     height: 80px;
-    border: solid,black;
+    border-radius: 5px;
     & .container{
         align-items: center;
         width: 1000px;
@@ -40,8 +40,4 @@ header {
             }
         }
     }
-}
-
-div {
-    border:solid,red;
 }
