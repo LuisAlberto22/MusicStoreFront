@@ -1,0 +1,25 @@
+header {
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    & .container{
+        align-items: center;
+        width: 1000px;
+        display: flex;
+        justify-content: space-between;
+        & .logo-container{
+            align-items: center;
+            display: flex;
+            & img{
+               width: 50px;
+               height: 50px; 
+            }
+            & h1{
+                font-size: 16px;
+                color:white;
+                font-weight: 500;
+            }
+        }
+    }
+}
