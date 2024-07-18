@@ -1,30 +1,73 @@
 <div class="home-container">
     <app-header></app-header>
+    <button (click)="testClick()">Click Aqui</button>
     <div class="content-container">
-        <section class="filter">
+        <!--Directivas para clases-->
+        <section [ngClass]="{filter:true}">
             <mat-form-field>
                 <mat-label>Generos</mat-label>
                 <mat-select>
-                    <mat-option value="">Rock</mat-option>
-                    <mat-option value="">Salsa</mat-option>
-                    <mat-option value="">Bachata</mat-option>
+                    <!--nuevo-->
+                    @for (genre of genres; track genre.id) {
+                    <mat-option value="{{genre.id}}">{{genre.name}} </mat-option>
+                    }
+                    @empty {
+                    NO Hay generos disponibles
+                    }
                 </mat-select>
             </mat-form-field>
             <span>Selecciona tu genero musical favorito</span>
         </section>
         <section class="event-list">
-            <app-card></app-card>
-            <app-card></app-card>
-            <app-card></app-card>
-            <app-card></app-card>
-            <app-card></app-card>
-            <app-card></app-card>
-            <app-card></app-card>
-            <app-card></app-card>
-            <app-card></app-card>
-            <app-card></app-card>
-            <app-card></app-card>
+            <!--For antiguo-->
+            <app-card *ngFor="let concert of concerts" [data]="concert" appHighlight></app-card>
         </section>
     </div>
     <app-footer></app-footer>
 </div>
+
+<!-- nuevo if
+
+    @if(){
+    
+    }
+    @else{
+    
+    }
+-->
+
+<!--Antiguo if
+
+    <h1 *ngIf="true">
+
+-->
+
+
+<!-- Switch antiguo!-->
+{{numeroDeConciertos}}
+<div [ngSwitch]="numeroDeConciertos">
+    <div *ngSwitchCase="0">
+        <h1>No Hay Conciertos Disponibles</h1>
+    </div>
+    <div *ngSwitchCase="1">
+        <h1>Hay un Concierto Disponibles</h1>
+    </div>
+    <div *ngSwitchDefault>
+        <h1>Hay varios conciertos disponibles</h1>
+    </div>
+</div>
+<!--
+-->
+<!--switch nuevo
+
+@switch(numeroDeConciertos){
+
+    @case(0){
+        Hola
+    }
+    @default{
+        default
+    }
+}
+
+-->
